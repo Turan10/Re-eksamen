@@ -70,7 +70,7 @@ const Navbar = () => {
                   {item.path.map((path, idx) => (
                     <li key={idx}>
                       <a className="dropdown-item" href={path}>
-                        {path}
+                        {path.substring(1)}
                       </a>
                     </li>
                   ))}

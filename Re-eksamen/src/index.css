@@ -24,14 +24,13 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 4.2em;
   line-height: 1.1;
 }
 
@@ -69,10 +68,16 @@ button:focus-visible {
 
 .navbar {
   width: 100%;
-transform: translate(-10%, 0);
 top: 0;
-position: fixed;
+position: fixed !important;
+
 }
+
+.navbar-brand {
+  margin-left: 1%;
+  text-align: center;
+}
+
 
 .container-fluid {
   padding-left: 0!important;
