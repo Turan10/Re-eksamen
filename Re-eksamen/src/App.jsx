@@ -3,9 +3,25 @@ import './App.css'
 import HigherOrderFunction from './Question1/higherOrderFunctions'
 import Navbar from './Question1/navbar'
 import './index.css'
+import ProfileForm from './Question2/callback'
 
 function App() {
 
+  const [userProfile, setUserProfile] = useState({
+    name: "",
+    age: 0,
+    email: "",
+    bio:"",
+    married: false
+  })
+
+  const updateProfile = (e) => {
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+    setUserProfile({
+      ...userProfile,
+      [e.target.name]: value
+    });
+  };
  
 
   return (
@@ -21,6 +37,7 @@ function App() {
       
 
       <HigherOrderFunction />
+      <ProfileForm userProfile={userProfile} updateProfile={updateProfile} />
 
 
     </div>

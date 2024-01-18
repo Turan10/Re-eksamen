@@ -1,0 +1,41 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .input-group {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  
+  .input-group label {
+    margin-right: 10px;
+    width: 80px;
+  }
+  
+  .input-group input, 
+  .input-group textarea {
+    flex-grow: 1;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    transform: translateY(20px);
+    transform: translateX(39px);
+    width: 100%;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
