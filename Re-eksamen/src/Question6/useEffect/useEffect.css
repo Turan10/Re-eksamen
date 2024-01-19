@@ -1,0 +1,60 @@
+.random-user-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .fetch-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .fetch-button:hover {
+    background-color: #45a049;
+  }
+  
+  .loading, .error {
+    color: #D32F2F;
+    margin: 10px 0;
+  }
+  
+  .user-data {
+    background-color: #f2f2f2;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .title {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .info {
+    color: #555;
+    text-align: left;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .random-user-container {
+      padding: 10px;
+    }
+  
+    .fetch-button {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  
+    .title, .info {
+      font-size: 14px;
+    }
+  }
+  

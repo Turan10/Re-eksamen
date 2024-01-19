@@ -15,6 +15,14 @@ const SyncAsync = () => {
     alert(`Square root of the counter is: ${squareRoot}`);
   };
 
+  const heavyComputation = () => {
+    // Tung computation funktion der blokere call stacken
+    let startTime = performance.now();
+    while (performance.now() - startTime < 5000) {
+    }
+    alert('Heavy computation finished');
+  };
+
   return (
     <div className="sync-async-container">
       <h1 className="sync-async-title">Sync/Async</h1>
@@ -22,6 +30,7 @@ const SyncAsync = () => {
       <div className="sync-async-buttons">
         <button onClick={increaseCounterAsync}>Increase Async 2sec delay</button>
         <button onClick={calculateSquareRoot}>Calculate Square Root</button>
+        <button onClick={heavyComputation}>Heavy Computation</button>
       </div>
     </div>
   );

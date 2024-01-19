@@ -10,6 +10,8 @@ import PhotoFetcher from './Question4/promise/promise'
 import ErrorBoundary from './Question4/errorBoundary'
 import SyncAsync from './Question5/syncAsync/syncAsync'
 import Conditionalrendering from './Question5/conditionalRendering/conditional'
+import StorageExample from './Question6/storage/storage'
+import RandomUserComponent from './Question6/useEffect/useEffect'
 
 function App() {
 
@@ -49,6 +51,8 @@ function App() {
           <Route path="/promise" element={<PhotoFetcher />} />
           <Route path="/syncasync" element={<SyncAsync />} />
           <Route path="/conditionalrendering" element={<Conditionalrendering />} />
+          <Route path="/storage" element={<StorageExample />} />
+          <Route path="/useeffect" element={<RandomUserComponent />} />
 
         
         </Routes>
