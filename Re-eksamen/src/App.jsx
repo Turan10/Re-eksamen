@@ -3,7 +3,8 @@ import './App.css'
 import HigherOrderFunction from './Question1/higherOrderFunctions'
 import Navbar from './Question1/navbar'
 import './index.css'
-import ProfileForm from './Question2/callback'
+import ProfileForm from './Question2/callback/callback'
+import {Flex, Grid} from './Question2/callback/flexbox and grid/flexGrid'
 
 function App() {
 
@@ -38,6 +39,9 @@ function App() {
 
       <HigherOrderFunction />
       <ProfileForm userProfile={userProfile} updateProfile={updateProfile} />
+
+      <Flex />
+      <Grid />
 
 
     </div>

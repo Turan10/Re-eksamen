@@ -4,6 +4,8 @@ const ProfileForm = ({ userProfile, updateProfile }) => {
     return (
       <div className='form-container'>
         <h2>Profile Form</h2>
+
+        <p>Demonstration callback function upon input</p>
         <form>
           <div className="input-group">
             <label>Name: </label>
