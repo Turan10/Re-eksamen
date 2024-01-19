@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
 
-const Navbar = () => {
+
+const MyNavbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
 
   const arrayOfRoutes = [
-    { name: "Question 1", path: ["/higherOrderFunction", "/navbar.jsx"] },
+    { name: "Question 1", path: ["/higherorderfunction", "/navbar.jsx"] },
     { name: "Question 2", path: ["/"] },
     { name: "Question 3", path: ["/"] },
     { name: "Question 4", path: ["/"] },
@@ -78,11 +80,10 @@ const Navbar = () => {
               </li>
             ))}
           </ul>
-        </div>
-        <div className="ml-auto"></div> {/* Pushes right-side content to the right */}
+          </div>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default MyNavbar;

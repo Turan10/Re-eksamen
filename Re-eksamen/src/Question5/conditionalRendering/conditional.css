@@ -1,0 +1,49 @@
+.conditional-rendering-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.toggle-button, .click-me-button, .thank-you-button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-button:hover, .click-me-button:hover, .thank-you-button:hover {
+    background-color: #ccc;
+}
+
+p {
+    color: #000;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+
+    transition: transform 0.3s ease;
+  }
+  
+  p:hover {
+    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+  }
+    
+    
+
+@media (max-width: 600px) {
+    .toggle-button, .click-me-button, .thank-you-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .toggle-button, .click-me-button, .thank-you-button {
+        font-size: 18px;
+        padding: 12px 24px;
+    }
+}
