@@ -1,0 +1,33 @@
+
+.bubbling-div {
+    border: 2px solid red;
+    padding: 20px;
+    margin: 10px;
+}
+
+.bubbling-span {
+    border: 2px solid green;
+    padding: 15px;
+    display: inline-block; 
+    margin: 5px;
+}
+
+.bubbling-button {
+    margin: 5px;
+}
+
+
+@media (max-width: 600px) {
+    .bubbling-div {
+        padding: 10px;
+        margin: 5px;
+    }
+
+    .bubbling-span {
+        padding: 10px;
+    }
+
+    .bubbling-button {
+        font-size: 14px;
+    }
+}

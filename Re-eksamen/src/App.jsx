@@ -12,6 +12,7 @@ import SyncAsync from './Question5/syncAsync/syncAsync'
 import Conditionalrendering from './Question5/conditionalRendering/conditional'
 import StorageExample from './Question6/storage/storage'
 import RandomUserComponent from './Question6/useEffect/useEffect'
+import EventBubbling from './Question8/eventbubbling/eventbubbling'
 
 function App() {
 
@@ -53,6 +54,7 @@ function App() {
           <Route path="/conditionalrendering" element={<Conditionalrendering />} />
           <Route path="/storage" element={<StorageExample />} />
           <Route path="/useeffect" element={<RandomUserComponent />} />
+          <Route path="/eventbubbling" element={<EventBubbling />} />
 
         
         </Routes>
