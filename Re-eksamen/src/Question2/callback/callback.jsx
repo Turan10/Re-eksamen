@@ -1,12 +1,17 @@
 import './callback.css';
 
 const ProfileForm = ({ userProfile, updateProfile }) => {
+
+    const handleSubmit = (event) => {
+        event.preventDefault(); 
+        alert(JSON.stringify(userProfile)); 
+
     return (
       <div className='form-container'>
         <h2>Profile Form</h2>
-
         <p>Demonstration callback function upon input</p>
-        <form>
+
+        <form onSubmit={handleSubmit}>
           <div className="input-group">
             <label>Name: </label>
             <input type="text" name="name" value={userProfile.name} onChange={updateProfile} />
@@ -27,12 +32,12 @@ const ProfileForm = ({ userProfile, updateProfile }) => {
             <label>Married: </label>
             <input type="checkbox" name="married" checked={userProfile.married} onChange={updateProfile} />
           </div>
+          <div className='button-container'>
+            <button type="submit" className="btn">Submit</button>
+          </div>
         </form>
-        <div className='button-container'>
-        <button className = "btn" onClick={() => alert(JSON.stringify(userProfile))}>Submit</button>
-        </div>
       </div>
     );
-  };
-  
-  export default ProfileForm;
+};
+
+export default ProfileForm;
