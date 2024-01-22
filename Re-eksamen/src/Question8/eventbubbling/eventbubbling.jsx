@@ -5,10 +5,9 @@ function EventBubbling() {
     const handleDivClick = () => {
         alert('Event reached div (grandparent)');
     };
-
     const handleSpanClick = (event) => {
         alert('Event reached span (parent)');
-        // event.stopPropagation(); // Hvis måden vi stopper bubbling på
+        // event.stopPropagation(); // måden vi stopper bubbling på
     };
 
     const handleButtonClick = () => {
