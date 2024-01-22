@@ -2,10 +2,10 @@ import './callback.css';
 
 const ProfileForm = ({ userProfile, updateProfile }) => {
 
-    const handleSubmit = (event) => {
-        event.preventDefault(); 
-        alert(JSON.stringify(userProfile)); 
-
+  const handleSubmit = (event) => {
+    event.preventDefault(); 
+    alert(JSON.stringify(userProfile)); 
+}; 
     return (
       <div className='form-container'>
         <h2>Profile Form</h2>
@@ -38,6 +38,9 @@ const ProfileForm = ({ userProfile, updateProfile }) => {
         </form>
       </div>
     );
+  
 };
+
+
 
 export default ProfileForm;
