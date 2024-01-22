@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import HigherOrderFunction from './Question1/higherOrderFunctions'
+import HigherOrderFunction from './Question1/higherOrderFunction/higherOrderFunctions'
 import MyNavbar from './Question1/navbar'
 import './index.css'
 import ProfileForm from './Question2/callback/callback'
@@ -23,6 +23,8 @@ function App() {
     bio:"",
     married: false
   })
+
+
 
   const updateProfile = (e) => {
     const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;

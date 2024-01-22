@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const ErrorBoundary = ({ children }) => {
 const [hasError, setHasError] = useState(false);
-
+    
 useEffect(() => {
 const handleError = (error, info) => {
 console.error('Error caught by error boundary:', error, info);

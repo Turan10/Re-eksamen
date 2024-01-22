@@ -7,7 +7,7 @@ function EventBubbling() {
     };
     const handleSpanClick = (event) => {
         alert('Event reached span (parent)');
-        // event.stopPropagation(); // måden vi stopper bubbling på
+        //event.stopPropagation(); // måden vi stopper bubbling på
     };
 
     const handleButtonClick = () => {

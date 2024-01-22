@@ -1,0 +1,64 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .main-title {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .list-container {
+    margin-bottom: 20px;
+  }
+  
+  .list-title {
+    color: #555;
+    margin-bottom: 10px;
+  }
+  
+  .people-list {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+  }
+  .person-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .person-item:last-child {
+    border-bottom: none;
+  }
+  
+  .increment-button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+  }
+  
+  .increment-button:hover {
+    background-color: #0056b3;
+  }
+  
+  @media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  
+    .increment-button {
+      width: 100%;
+      font-size: 18px;
+    }
+  }
+  
