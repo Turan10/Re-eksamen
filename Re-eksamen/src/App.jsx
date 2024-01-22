@@ -13,6 +13,7 @@ import Conditionalrendering from './Question5/conditionalRendering/conditional'
 import StorageExample from './Question6/storage/storage'
 import RandomUserComponent from './Question6/useEffect/useEffect'
 import EventBubbling from './Question8/eventbubbling/eventbubbling'
+import ControlledUncontrolled from './Question9/controlledUncontrolled'
 
 function App() {
 
@@ -49,14 +50,16 @@ function App() {
           <Route index path="/" />
           <Route path="/higherorderfunction" element={<HigherOrderFunction />} />
           <Route path="/profile" element={<ProfileForm userProfile={userProfile} updateProfile={updateProfile} />} />
-          <Route path="/flex" element={<Flex />} />
-          <Route path="/grid" element={<Grid />} />
+          <Route path="/flex" element={<Flex />} >
+          <Route path="grid" element={<Grid />} />
+          </Route>
           <Route path="/promise" element={<PhotoFetcher />} />
           <Route path="/syncasync" element={<SyncAsync />} />
           <Route path="/conditionalrendering" element={<Conditionalrendering />} />
           <Route path="/storage" element={<StorageExample />} />
           <Route path="/useeffect" element={<RandomUserComponent />} />
           <Route path="/eventbubbling" element={<EventBubbling />} />
+          <Route path="/controlleduncontrolled" element={<ControlledUncontrolled />} />
 
         
         </Routes>
