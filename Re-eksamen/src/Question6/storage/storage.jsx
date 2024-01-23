@@ -13,6 +13,7 @@ const StorageExample = () => {
   const saveToSessionStorage = () => {
     sessionStorage.setItem('myData', input);
   };
+  
 
   const saveToLocalStorage = () => {
     localStorage.setItem('myData', input);
