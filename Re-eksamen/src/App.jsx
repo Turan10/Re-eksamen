@@ -61,7 +61,10 @@ function App() {
           <Route path="/eventbubbling" element={<EventBubbling />} />
           <Route path="/controlleduncontrolled" element={<ControlledUncontrolled />} />
 
-        
+
+          <Route path="*" element={<h1>404 - Not Found</h1>} />
+
+ 
         </Routes>
 
         </ErrorBoundary>
