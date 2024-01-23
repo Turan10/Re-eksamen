@@ -31,6 +31,14 @@ function App() {
     married: false
   })
 
+  const updateProfile = (e) => {
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
+    setUserProfile({
+      ...userProfile,
+      [e.target.name]: value
+    });
+  };
+
 
 const login = (user, pass) => {
   facade.login(user, pass)
@@ -49,29 +57,20 @@ const logout = () => {
 }
 
 
-
-
-
-
-
-  const updateProfile = (e) => {
-    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
-    setUserProfile({
-      ...userProfile,
-      [e.target.name]: value
-    });
-  };
  
 
   return (
     <Router>
       <div>
+          {/* 
         {!loggedIn ? (<LogIn login={login} />) :
         (<div>
-          <LoggedIn user={user}  />
+          <LoggedIn user={user} />
           <button onClick={logout}>Logout</button>
         </div>)}
+        */}
 
+        
         <header>
           <MyNavbar />
         </header>

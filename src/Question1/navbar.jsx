@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 
 
@@ -7,14 +8,14 @@ const MyNavbar = () => {
 
   const arrayOfRoutes = [
     { name: "Question 1", path: ["/higherorderfunction", "/navbar.jsx"] },
-    { name: "Question 2", path: ["/"] },
+    { name: "Question 2", path: ["/flex", "/flex/grid", "/profile"] },
     { name: "Question 3", path: ["/"] },
-    { name: "Question 4", path: ["/"] },
-    { name: "Question 5", path: ["/"] },
-    { name: "Question 6", path: ["/"] },
+    { name: "Question 4", path: ["/promise"] },
+    { name: "Question 5", path: ["/conditionalrendering", "/syncasync"] },
+    { name: "Question 6", path: ["/storage", "/useeffect"] },
     { name: "Question 7", path: ["/"] },
-    { name: "Question 8", path: ["/"] },
-    { name: "Question 9", path: ["/"] },
+    { name: "Question 8", path: ["/eventbubbling"] },
+    { name: "Question 9", path: ["/controlleduncontrolled"] },
     { name: "Question 10", path: ["/"] },
     { name: "Question 11", path: ["/"] },
     { name: "Question 12", path: ["/"] },
@@ -29,9 +30,9 @@ const MyNavbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <NavLink className="navbar-brand" to="#">
           Navbar
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler"
           type="button"
@@ -52,9 +53,9 @@ const MyNavbar = () => {
                 }`}
                 key={index}
               >
-                <a
+                <NavLink
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  to="#"
                   id={`navbarDropdown-${index}`}
                   role="button"
                   data-bs-toggle="dropdown"
@@ -62,25 +63,25 @@ const MyNavbar = () => {
                   onClick={() => toggleDropdown(item.name)}
                 >
                   {item.name}
-                </a>
+                </NavLink>
                 <ul
                   className={`dropdown-menu ${
                     activeDropdown === item.name ? "show" : ""
                   }`}
                   aria-labelledby={`navbarDropdown-${index}`}
                 >
-                  {item.path.map((path, idx) => (
-                    <li key={idx}>
-                      <a className="dropdown-item" href={path}>
+                  {item.path.map((path, pathIndex) => (
+                    <li key={pathIndex}>
+                      <NavLink className="dropdown-item" to={path}>
                         {path.substring(1)}
-                      </a>
+                      </NavLink>
                     </li>
                   ))}
                 </ul>
               </li>
             ))}
           </ul>
-          </div>
+        </div>
       </div>
     </nav>
   );
