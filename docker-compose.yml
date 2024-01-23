@@ -31,9 +31,9 @@ services:
       - backend
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.examreact.rule=Host(`reexam.freshcph.dk`) || Host(`stylizedace.dk`)"
-      - "traefik.http.routers.examreact.entrypoints=websecure"
-      - "traefik.http.routers.examreact.tls.certresolver=myresolver"
+      - "traefik.http.routers.reexam.rule=Host(`reexam.freshcph.dk`) || Host(`freshcph.dk`)"
+      - "traefik.http.routers.reexam.entrypoints=websecure"
+      - "traefik.http.routers.reexam.tls.certresolver=myresolver"
       - "com.centurylinklabs.watchtower.enable=true"
 
 networks:
