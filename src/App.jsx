@@ -1,4 +1,7 @@
 import { useState } from 'react'
+import facade from './login/apiFacade'
+import LogIn from "./login/loginForm"
+import LoggedIn from "./login/loggedIn"
 import './App.css'
 import HigherOrderFunction from './Question1/higherOrderFunction/higherOrderFunctions'
 import MyNavbar from './Question1/navbar'
@@ -17,6 +20,9 @@ import ControlledUncontrolled from './Question9/controlledUncontrolled'
 
 function App() {
 
+  const [loggedIn, setLoggedIn] = useState(false)
+  const [user, setUser] = useState({name: "", roles: ""});
+
   const [userProfile, setUserProfile] = useState({
     name: "",
     age: 0,
@@ -24,6 +30,27 @@ function App() {
     bio:"",
     married: false
   })
+
+
+const login = (user, pass) => {
+  facade.login(user, pass)
+  .then(() => {
+    const token = facade.readJwtToken(facade.getToken());
+    setUser({name: token.username, roles: token.roles});
+    setLoggedIn(true);
+
+  });
+}
+
+const logout = () => {
+  facade.logout();
+  setLoggedIn(false);
+  setUser({name: "", roles: ""});
+}
+
+
+
+
 
 
 
@@ -39,6 +66,12 @@ function App() {
   return (
     <Router>
       <div>
+        {!loggedIn ? (<LogIn login={login} />) :
+        (<div>
+          <LoggedIn user={user}  />
+          <button onClick={logout}>Logout</button>
+        </div>)}
+
         <header>
           <MyNavbar />
         </header>
